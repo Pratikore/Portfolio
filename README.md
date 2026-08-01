@@ -62,3 +62,4 @@ These were best guesses from the résumé — update them in `src/data/portfolio
 ### Replace the profile photo
 
 Swap `public/profile.png` with your preferred image (keep the same filename, or update `profile.avatar` in the data file).
+"# Portfolio" 
