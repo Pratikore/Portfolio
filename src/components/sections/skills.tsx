@@ -2,6 +2,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { skillGroups } from "@/data/portfolio";
 import { Code2, Layers, Wrench, Cloud, Boxes } from "lucide-react";
+import { getSkillIcon } from "@/components/icons/brand-icons";
 
 const icons = [Code2, Layers, Wrench, Cloud, Boxes];
 
@@ -30,11 +31,17 @@ export function Skills() {
                     </h3>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {group.skills.map((s) => (
-                      <span key={s} className="chip">
-                        {s}
-                      </span>
-                    ))}
+                    {group.skills.map((s) => {
+                      const SkillIcon = getSkillIcon(s);
+                      return (
+                        <span key={s} className="chip gap-1.5">
+                          {SkillIcon ? (
+                            <SkillIcon className="h-3.5 w-3.5" aria-hidden />
+                          ) : null}
+                          {s}
+                        </span>
+                      );
+                    })}
                   </div>
                 </div>
               </Reveal>

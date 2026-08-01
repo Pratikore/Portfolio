@@ -2,6 +2,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { projects } from "@/data/portfolio";
 import { ArrowUpRight, Github, Folder } from "lucide-react";
+import { getSkillIcon } from "@/components/icons/brand-icons";
 
 export function Projects() {
   return (
@@ -62,11 +63,17 @@ export function Projects() {
 
                 <div className="mt-auto pt-6">
                   <div className="flex flex-wrap gap-2">
-                    {p.tech.map((t) => (
-                      <span key={t} className="chip">
-                        {t}
-                      </span>
-                    ))}
+                    {p.tech.map((t) => {
+                      const TechIcon = getSkillIcon(t);
+                      return (
+                        <span key={t} className="chip gap-1.5">
+                          {TechIcon ? (
+                            <TechIcon className="h-3.5 w-3.5" aria-hidden />
+                          ) : null}
+                          {t}
+                        </span>
+                      );
+                    })}
                   </div>
                   {p.link ? (
                     <a

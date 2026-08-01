@@ -1,7 +1,8 @@
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { certifications } from "@/data/portfolio";
-import { BadgeCheck, ExternalLink, ShieldCheck } from "lucide-react";
+import { ExternalLink, ShieldCheck } from "lucide-react";
+import { brandConfig } from "@/components/icons/brand-icons";
 
 export function Certifications() {
   return (
@@ -14,7 +15,10 @@ export function Certifications() {
         />
 
         <div className="grid gap-6 sm:grid-cols-2">
-          {certifications.map((c, i) => (
+          {certifications.map((c, i) => {
+            const brand = brandConfig[c.brand];
+            const BrandLogo = brand.icon;
+            return (
             <Reveal key={c.name} delay={i * 0.08}>
               <a
                 href={c.credlyUrl}
@@ -22,8 +26,10 @@ export function Certifications() {
                 rel="noopener noreferrer"
                 className="glass glass-hover group flex h-full items-start gap-4 rounded-2xl p-6"
               >
-                <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-amber-400 via-brand-500 to-accent-500 text-white shadow-lg shadow-brand-500/30">
-                  <BadgeCheck className="h-7 w-7" />
+                <div
+                  className={`grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br ${brand.gradient} text-white shadow-lg shadow-brand-500/30`}
+                >
+                  <BrandLogo className="h-8 w-8" aria-label={brand.label} />
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="flex items-start justify-between gap-2">
@@ -42,7 +48,8 @@ export function Certifications() {
                 </div>
               </a>
             </Reveal>
-          ))}
+            );
+          })}
         </div>
 
         <Reveal delay={0.15} className="mt-10 flex items-center justify-center">

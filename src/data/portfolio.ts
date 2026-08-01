@@ -219,6 +219,7 @@ export type Certification = {
   issuer: string;
   date: string;
   credlyUrl: string;
+  brand: "aws" | "kubernetes";
 };
 
 export const certifications: Certification[] = [
@@ -229,6 +230,7 @@ export const certifications: Certification[] = [
     date: "Jan 2026",
     credlyUrl:
       "https://www.credly.com/badges/29abf6a6-65db-47be-ad56-c6734f8538ec/public_url",
+    brand: "kubernetes",
   },
   {
     name: "AWS Certified AI Practitioner",
@@ -237,6 +239,7 @@ export const certifications: Certification[] = [
     date: "May 2025",
     credlyUrl:
       "https://www.credly.com/badges/3889574d-5bd9-4850-85d6-461e3be1ea89/public_url",
+    brand: "aws",
   },
   {
     name: "AWS Certified Developer — Associate",
@@ -245,6 +248,7 @@ export const certifications: Certification[] = [
     date: "Apr 2025",
     credlyUrl:
       "https://www.credly.com/badges/9d80c66d-a9e5-4f83-87ad-b86c2f338bdd/public_url",
+    brand: "aws",
   },
   {
     name: "AWS Certified Cloud Practitioner",
@@ -253,6 +257,7 @@ export const certifications: Certification[] = [
     date: "Feb 2025",
     credlyUrl:
       "https://www.credly.com/badges/7356ec2e-a3d6-43a9-96dd-1cfda7ec862f/public_url",
+    brand: "aws",
   },
 ];
 

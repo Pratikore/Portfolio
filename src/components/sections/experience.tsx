@@ -2,6 +2,7 @@ import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { experiences } from "@/data/portfolio";
 import { Briefcase, CheckCircle2 } from "lucide-react";
+import { getSkillIcon } from "@/components/icons/brand-icons";
 
 export function Experience() {
   return (
@@ -50,11 +51,17 @@ export function Experience() {
                     </ul>
 
                     <div className="mt-6 flex flex-wrap gap-2">
-                      {exp.tech.map((t) => (
-                        <span key={t} className="chip">
-                          {t}
-                        </span>
-                      ))}
+                      {exp.tech.map((t) => {
+                        const TechIcon = getSkillIcon(t);
+                        return (
+                          <span key={t} className="chip gap-1.5">
+                            {TechIcon ? (
+                              <TechIcon className="h-3.5 w-3.5" aria-hidden />
+                            ) : null}
+                            {t}
+                          </span>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
