@@ -126,7 +126,7 @@ export function Hero() {
             >
               <p className="font-display text-xl font-bold text-gradient">4x</p>
               <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                Cloud Certs
+                Cloud Certified
               </p>
             </motion.div>
           </div>

@@ -33,7 +33,7 @@ export const profile = {
   highlights: [
     { value: "4.2+", label: "Years Experience" },
     { value: "25%", label: "Performance Boost" },
-    { value: "4x", label: "Cloud Certifications" },
+    { value: "4x", label: "Cloud Certified" },
     { value: "10+", label: "Cross-functional Teams" },
   ],
 };
@@ -221,37 +221,38 @@ export type Certification = {
   credlyUrl: string;
 };
 
-// Replace credlyUrl values with your exact Credly badge links.
-export const credlyProfile = "https://www.credly.com/users/pratik-kore";
-
 export const certifications: Certification[] = [
   {
-    name: "Kubernetes Accredited Application Developer",
-    code: "KAAD",
+    name: "Certified Kubernetes Application Developer (CKAD)",
+    code: "CKAD",
     issuer: "The Linux Foundation",
     date: "Jan 2026",
-    credlyUrl: "https://www.credly.com/users/pratik-kore",
+    credlyUrl:
+      "https://www.credly.com/badges/29abf6a6-65db-47be-ad56-c6734f8538ec/public_url",
   },
   {
     name: "AWS Certified AI Practitioner",
     code: "AIF-C01",
     issuer: "Amazon Web Services",
     date: "May 2025",
-    credlyUrl: "https://www.credly.com/users/pratik-kore",
+    credlyUrl:
+      "https://www.credly.com/badges/3889574d-5bd9-4850-85d6-461e3be1ea89/public_url",
   },
   {
     name: "AWS Certified Developer — Associate",
     code: "DVA-C02",
     issuer: "Amazon Web Services",
     date: "Apr 2025",
-    credlyUrl: "https://www.credly.com/users/pratik-kore",
+    credlyUrl:
+      "https://www.credly.com/badges/9d80c66d-a9e5-4f83-87ad-b86c2f338bdd/public_url",
   },
   {
     name: "AWS Certified Cloud Practitioner",
     code: "CLF-C02",
     issuer: "Amazon Web Services",
     date: "Feb 2025",
-    credlyUrl: "https://www.credly.com/users/pratik-kore",
+    credlyUrl:
+      "https://www.credly.com/badges/7356ec2e-a3d6-43a9-96dd-1cfda7ec862f/public_url",
   },
 ];
 

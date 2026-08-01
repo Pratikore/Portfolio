@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { certifications, credlyProfile } from "@/data/portfolio";
+import { certifications } from "@/data/portfolio";
 import { BadgeCheck, ExternalLink, ShieldCheck } from "lucide-react";
 
 export function Certifications() {
@@ -45,17 +45,11 @@ export function Certifications() {
           ))}
         </div>
 
-        <Reveal delay={0.15} className="mt-10 text-center">
-          <a
-            href={credlyProfile}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="glass glass-hover inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold"
-          >
+        <Reveal delay={0.15} className="mt-10 flex items-center justify-center">
+          <span className="glass inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-slate-600 dark:text-slate-300">
             <ShieldCheck className="h-4 w-4 text-accent-500" />
-            View all badges on Credly
-            <ExternalLink className="h-4 w-4" />
-          </a>
+            All credentials are verifiable on Credly — click any badge above
+          </span>
         </Reveal>
       </div>
     </section>

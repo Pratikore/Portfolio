@@ -53,11 +53,12 @@ All content lives in a single file — **`src/data/portfolio.ts`**. Update text,
 
 ### ⚠️ Placeholders to replace with your real links
 
-These were best guesses from the résumé — update them in `src/data/portfolio.ts`:
+Update these in `src/data/portfolio.ts`:
 
-- **Naukri** URL (`socials` → Naukri `href`)
-- **Credly** badge URLs (`certifications[].credlyUrl`) and `credlyProfile` — paste each certificate's exact Credly badge link.
+- **Naukri** URL (`socials` → Naukri `href`) — currently a generic link.
 - Add more **GitHub projects** to the `projects` array as needed.
+
+> Credly badge URLs are now the real, verifiable public badge links pulled from your résumé.
 
 ### Replace the profile photo
 

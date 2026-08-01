@@ -22,7 +22,7 @@ const facts = [
   {
     icon: Award,
     title: "Certified & Curious",
-    text: "4x AWS/Cloud-native certified and a Kubernetes Accredited Application Developer — always leveling up.",
+    text: "4x cloud certified — 3x AWS (AI Practitioner, Developer Associate, Cloud Practitioner) plus a Certified Kubernetes Application Developer (CKAD).",
   },
 ];
 
